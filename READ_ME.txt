@@ -7,3 +7,7 @@ Support de jeu de rôles (rpg) basé sur javascript, HTML5 et CSS
 - Définition des caractéristiques des joueurs, du mdj (fonctions, système de gain d'expérience basé sur l'apprentissage, implication des différents acteurs du jeu et interaction avec l'application) ;
 - Développement du front-end avec HTML5, CSS et javascript (manipulation du DOM), en tenant en compte l'expérience utilisateur et la finalité de l'application (En cours : version actuelle proche de la version "finale" du premier jet de l'application pour pc/(mac) );
 - Documentation sur l'utilisation d'un SGBD embarqué (En cours : AlaSQL, indexedDB, localStorage).
+
+* Eléments :
+- les éléments se trouvent dans le dossier 'Enjeu/elements/nomElement'
+- dans /nomElement se trouvent : un fichier nomElement.html, et deux fichiers css : 'nomElement.css' (style de l'élément) et 'grilleNomElement.css (structure grid css)'
