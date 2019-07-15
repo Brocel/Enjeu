@@ -1,0 +1,70 @@
+{
+  "joueurs": [
+    {
+      "id": "000",
+      "image": "mdjIcone",
+      "imgUrl": "../data/img/icons/mdjIcone.jpg",
+      "nom": "Metalchemist",
+      "genetique": [
+        {
+          "race": "Humain",
+          "sexe": "Masculin",
+        }
+      ],
+      "caracteristiques": [
+        {
+          "age": 666,
+          "taille": 190,
+          "masse": 70,
+        }
+      ],
+      "carrière": [
+        {
+          "classe": "sage",
+          "spe": "alchimie",
+          "titre": "Hohenheim",
+          "cv": [
+            "Nouvel arrivant",
+            "Alchimiste de renom"
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "role": "mdj",
+          "divinite": [
+            "Maya",
+            "Brocel",
+            "Sylinder"
+          ],
+          "histoire": [
+            "Nouveau créateur",
+            "Appprenti dieu"
+          ],
+          "xpMdj": 0,
+          "nivMdj":1,
+          "stats":"a faire",
+          "competences": [
+            "evenement divin",
+            "element",
+            "rencontre",
+            "destin"
+          ]
+        },
+        {
+          "role": "joueur",
+          "xpJ": 0,
+          "nivJ":1,
+          "titreJ": "novice",
+          "competences": [
+            "dormir",
+            "manger",
+            "se présenter",
+            "combattre"
+          ],
+          "stats":"a faire"
+        }
+      ]
+    },
+  ]
+}

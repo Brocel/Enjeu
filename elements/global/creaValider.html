@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<link rel="stylesheet" href="../css/container.css">
+	<link rel="stylesheet" href="../css/creaValider.css">
+	<link rel="stylesheet" href="../css/grilleCreaValider.css">
+  <!-- <script type="text/javascript" src="../js/enjeu.js"></script> -->
+	<!-- <script type="text/javascript" src="../js/objetsPages.js"></script> -->
+</head>
+
+<body>
+<div class="grilleCreaValider">
+	<form>
+			<button  margin="auto">Oui, pourquoi pas ?</button>
+
+			<button margin="auto">Non, je suis sûr de mon coup !</button>
+		</form>
+</div>
+</body>
+<script type="text/javaScript">
+//Variables globales
+var valeur;
+//Méthodes
+	function showText(f, nomElt) {
+		valeur = f.elements[nomElt].value;
+		console.log(valeur);
+		localStorage.setItem('nomJoueur', valeur);
+	}
+
+</script>
+</html>

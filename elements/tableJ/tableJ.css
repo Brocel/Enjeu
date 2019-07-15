@@ -1,0 +1,23 @@
+/*éléments de grilleTableJ*/
+.eltTableJ {
+  /*dimensions*/
+  height: 100vh;
+  width: 100%;
+  /*aligner verticalement et horizontalement le contenu*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*habillage*/
+  color: rgba(202, 111, 30, 1);
+}
+.elt {
+  /*dimensions*/
+  height: 100%;
+  width: 100%;
+  /*aligner verticalement et horizontalement le contenu*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*habillage*/
+  color: rgba(202, 111, 30, 1);
+}

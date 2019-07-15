@@ -1,0 +1,47 @@
+.aff {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-gap: 1%;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(5,1fr);
+  grid-template-areas:/*penser aux gutter des grid*/
+  "j1 nj1"
+  "j2 nj2"
+  "j3 nj3"
+  "j4 nj4"
+  "j5 nj5";
+}
+  /*éléments*/
+
+  .j1 {
+    grid-area: j1;
+  }
+  .j2 {
+    grid-area: j2;
+  }
+  .j3 {
+    grid-area: j3;
+  }
+  .j4 {
+    grid-area: j4;
+  }
+  .j5 {
+    grid-area: j5;
+  }
+  /*nom joueurs*/
+  .nj1 {
+    grid-area: nj1;
+  }
+  .nj2 {
+    grid-area: nj2;
+  }
+  .nj3 {
+    grid-area: nj3;
+  }
+  .nj4 {
+    grid-area: nj4;
+  }
+  .nj5 {
+    grid-area: nj5;
+  }

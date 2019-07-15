@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html style="height:100%">
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+<div class="container-fluid">
+	<form style="text-align: center;">
+		<fieldset> <legend align="left">Maître du jeu</legend>
+		<br>
+			Nom : <input type="text" placeholder="Utilisateur" required pattern = '[A-z\ ]{2,15}'/><br><br>
+			<select name="optionJ" id="optionJ" required>
+				<option value="">--Choisir une divinité--</option>
+				<option id="divin1" type="submit" value="1" onclick="return enregistrePerso()">Maya</option>
+				<option id="divin2" type="submit" value="2" onclick="return enregistrePerso()">Brocel</option>
+				<option id="divin3" type="submit" value="3" onclick="return enregistrePerso()">Sylinder</option>
+			</select>
+		<br><br>
+		</fieldset>
+		<br>
+		<button display="block" margin="auto">Valider</button>
+	</form>
+</div>
+</body>
+</html>

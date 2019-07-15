@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="personnages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="personnage"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="personnage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="presentation"/>
+        <xs:element ref="orientation"/>
+        <xs:element ref="statistiques"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="presentation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="image"/>
+        <xs:element name="nom" type="xs:string"/>
+        <xs:element name="sexe" type="xs:string"/>
+        <xs:element ref="age"/>
+        <xs:element ref="taille"/>
+        <xs:element ref="masse"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="image">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element name="nom" type="xs:string"/>
+        <xs:element name="url" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="age">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string" use="required"/>
+      <xs:attribute name="unite" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="taille">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string" use="required"/>
+      <xs:attribute name="unite" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="masse">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string" use="required"/>
+      <xs:attribute name="unite" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="orientation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="race" type="xs:string"/>
+        <xs:element name="classe" type="xs:string"/>
+        <xs:element name="specialite" type="xs:string"/>
+        <xs:element name="titre" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="statistiques">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="vitales"/>
+        <xs:element ref="physiques"/>
+        <xs:element ref="role"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vitales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="vieMax"/>
+        <xs:element name="statut" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vieMax">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string" use="required"/>
+      <xs:attribute name="unite" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="physiques">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="for"/>
+        <xs:element ref="def"/>
+        <xs:element ref="int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="for">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string" use="required"/>
+      <xs:attribute name="unite" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="def">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string" use="required"/>
+      <xs:attribute name="unite" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="int">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string" use="required"/>
+      <xs:attribute name="unite" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="role">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mdj"/>
+        <xs:element ref="joueur"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mdj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="image"/>
+        <xs:element ref="xp"/>
+        <xs:element ref="niveau"/>
+        <xs:element name="titre" type="xs:string"/>
+        <xs:element ref="competences"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xp">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="niveau">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="competences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="competence"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="competence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nom" type="xs:string"/>
+        <xs:element name="effet" type="xs:string"/>
+        <xs:element ref="quantite"/>
+        <xs:element ref="de"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="quantite">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="de">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="joueur">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xp"/>
+        <xs:element ref="niveau"/>
+        <xs:element name="titre" type="xs:string"/>
+        <xs:element ref="competences"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

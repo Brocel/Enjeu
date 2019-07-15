@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<personnages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="personnages.xsd">
+  <personnage>
+    <id>000</id>
+    <presentation>
+      <image>
+        <id>01</id>
+        <nom>humHom.jpg</nom>
+        <url>"../data/img/icons/humHom.jpg"</url>
+      </image>
+      <nom>Brocel</nom>
+      <sexe>Masculin</sexe>
+      <age unite="ans" type="xs:int">31</age>
+      <taille unite="cm" type="xs:int">188</taille>
+      <masse unite="kg" type="xs:int">65</masse>
+    </presentation>
+    <orientation>
+      <race>Humain</race>
+      <classe>Mage</classe>
+      <specialite>Alchimie</specialite>
+      <titre>Hohenheim</titre>
+    </orientation>
+    <statistiques>
+      <vitales>
+        <vieMax unite="forme" type="xs:int">100</vieMax>
+        <statut>Vivant</statut>
+      </vitales>
+      <physiques>
+        <for unite="USI" type="xs:int">10</for>
+        <def unite="USI" type="xs:int">10</def>
+        <int unite="USI" type="xs:int">10</int>
+      </physiques>
+      <role>
+        <mdj>
+          <image>
+            <id type="xs:int">01</id>
+            <nom>mdjIcone.jpg</nom>
+            <url>"../data/img/icons/mdjIcone.jpg"</url>
+          </image>
+          <xp type="xs:int">0</xp>
+          <niveau type="xs:int">1</niveau>
+          <titre>En période d'essais</titre>
+          <competences>
+            <competence>
+              <nom>Evenement divin</nom>
+              <effet>Aléatoire</effet>
+              <quantite>1</quantite>
+              <de type="xs:int">10</de>
+            </competence>
+          </competences>
+        </mdj>
+        <joueur>
+          <xp type="xs:int">0</xp>
+          <niveau type="xs:int">1</niveau>
+          <titre>Novice</titre>
+          <competences>
+            <competence>
+              <nom>Attaque</nom>
+              <effet>Attaque physique</effet>
+              <quantite type="xs:int">10</quantite>
+              <de type="xs:int">6</de>
+            </competence>
+          </competences>
+        </joueur>
+      </role>
+    </statistiques>
+  </personnage>
+</personnages>

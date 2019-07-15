@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<link rel="stylesheet" href="../global/container.css">
+	<link rel="stylesheet" href="conJ.css">
+	<link rel="stylesheet" href="grilleConJ.css">
+  <script type="text/javascript" src="conJ.js"></script>
+</head>
+
+<body>
+	<div class="eltConJ bGround">
+		<div id="aff" class="aff">
+			<form id="fNomJ" class="elt conJ" title="Connexion d'un Joueur : nom + entrée ?">
+				<input id="nomJ" name="nomJ" type="text" placeholder="Nom du Joueur" onkeyup="stockText(this.form,'nomJ','nomConJ')" required pattern = '[A-Z]{1}[a-zA-ZÀ-ÿ/ ]{1,19}'/>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

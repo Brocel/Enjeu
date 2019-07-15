@@ -1,0 +1,13 @@
+/*Elements généraux : changer le nom en global.css*/
+*{
+  box-sizing:border-box;
+  text-align: center;
+  margin:0;
+  scrollbar-width: none;
+}
+.imgJ {
+  height: 25%;
+  width: 25%;
+  position: fixed;
+  border: 1px solid rgba(202, 111, 30, 1);
+}

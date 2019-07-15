@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<link rel="stylesheet" href="../global/container.css">
+	<link rel="stylesheet" href="creaPortrait.css">
+	<link rel="stylesheet" href="grilleCreaPortrait.css">
+</head>
+
+<body>
+	<div class="grilleCreaP">
+		<div id="img" class="img">
+			5.<select id="imageJ" name="imageJ" required>
+					<option value="">--Image--</option>
+					<option id="hh" type="submit" value="hh">Humhom</option>
+					<option id="hf" type="submit" value="hf">Humfem</option>
+					<option id="eh" type="submit" value="eh">Elfhom</option>
+					<option id="ef" type="submit" value="ef">Elffem</option>
+					<option id="oh" type="submit" value="oh">Orchom</option>
+					<option id="of" type="submit" value="of">Orcfem</option>
+				</select>
+		</div>
+		<div id="age" class="age">
+			9.<button>Age</button>
+		</div>
+		<div id="tai" class="tai">
+			7.<button>Taille</button>
+		</div>
+		<div id="mas" class="mas">
+			8.<button>Masse</button>
+		</div>
+		<div id="car" class="car">
+			6.<button>Caractère</button>
+		</div>
+	</div>
+</body>
+<script type="text/javaScript">
+//Variables globales
+var valeur;
+//Méthodes
+	function showText(f, nomElt) {
+		valeur = f.elements[nomElt].value;
+		console.log(valeur);
+		localStorage.setItem('nomJoueur', valeur);
+	}
+
+</script>
+</html>

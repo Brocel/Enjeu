@@ -1,0 +1,25 @@
+.bGround {
+  background-image: url("../../img/background/parchemin.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+/*éléments de grilleEnjeu*/
+.elt {
+  /*dimensions*/
+  height: 100%;
+  width: 100%;
+  /*aligner verticalement et horizontalement le contenu*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*habillage*/
+  color: rgba(202, 111, 30, 1);
+}
+.titre1 {
+  font: bold 25px arial, sans-serif;
+}
+/*boutons*/
+/*contenus affichés*/
+/*Choix joueur*/
+/*Afficher joueur*/

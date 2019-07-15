@@ -1,0 +1,102 @@
+.grilleValJ {
+  display: grid;
+  align-items: center;
+  height: 100vh;
+  color: black;
+  grid-gap: 4%;
+  grid-template-columns: repeat(2,0.5fr) repeat(2,1fr);
+  grid-template-rows: repeat(10,1fr);
+  grid-template-areas:
+  ". . nom nom"
+  ". . niv niv"
+  ". . tit tit"
+  "age age car car"
+  "mas mas tai tai"
+  "sex sex rac rac"
+  "met met spe spe"
+  "for for def int"
+  "his his his his"
+  "val val val val";
+}
+  /*Eléments*/
+  .nom {
+    grid-area: nom;
+    width: 100%;
+    height:100%;
+    color : rgba(202, 111, 30, 1);
+  }
+  .niv {
+    grid-area: niv;
+    width: 100%;
+    height:100%;
+  }
+  .tit {
+    grid-area: tit;
+    width: 100%;
+    height:100%;
+  }
+  .age {
+    grid-area: age;
+    width: 100%;
+    height:100%;
+  }
+  .tai {
+    grid-area: tai;
+    width: 100%;
+    height:100%;
+  }
+  .mas {
+    grid-area: mas;
+    width: 100%;
+    height:100%;
+  }
+  .car {
+    grid-area: car;
+    width: 100%;
+    height:100%;
+  }
+  .rac {
+    grid-area: rac;
+    width: 100%;
+    height:100%;
+  }
+  .sex {
+    grid-area: sex;
+    width: 100%;
+    height:100%;
+  }
+  .met {
+    grid-area: met;
+    width: 100%;
+    height:100%;
+  }
+  .spe {
+    grid-area: spe;
+    width: 100%;
+    height:100%;
+  }
+  .his {
+    grid-area: his;
+    width: 100%;
+    height:100%;
+  }
+  .for {
+    grid-area: for;
+    width: 100%;
+    height:100%;
+  }
+  .def {
+    grid-area: def;
+    width: 100%;
+    height:100%;
+  }
+  .intel {
+    grid-area: int;
+    width: 100%;
+    height:100%;
+  }
+  .inv {
+    grid-area: inv;
+    width: 100%;
+    height:100%;
+  }
