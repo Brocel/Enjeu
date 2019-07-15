@@ -1,0 +1,46 @@
+.grilleCredits {
+  display: grid;
+  align-items: center;
+  height: 100vh;
+  width:100%;
+  grid-gap: 1%;
+  border: 1px solid;
+  border-color: rgba(202, 111, 30, 1);
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr) 7fr 1fr;
+  grid-template-areas:
+  "tit tit"
+  "st1 st2"
+  "img rem"
+  "ft ft";
+}
+  /*Eléments*/
+  .tit {
+    grid-area: tit;
+  }
+  .st1 {
+    grid-area: st1;
+  }
+  .st2 {
+    grid-area: st2;
+  }
+  /*contenus*/
+  .img {
+    grid-area: img;
+    width: inherit;
+    height:100%;
+    border: 1px solid;
+    border-color: rgba(202, 111, 30, 1);
+
+  }
+  .rem {
+    grid-area: rem;
+    width: inherit;
+    height:100%;
+    border: 1px solid;
+    border-color: rgba(202, 111, 30, 1);
+  }
+
+  .ft {
+    grid-area: ft;
+  }
