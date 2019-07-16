@@ -3,20 +3,24 @@
   align-items: center;
   height: 100vh;
   width:100%;
-  grid-gap: 1%;
+  padding-left: 20%;
+  padding-bottom: 5%;
+  padding-right: 10%;
+  grid-gap: 5%;
   border: 1px solid;
   border-color: rgba(202, 111, 30, 1);
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(2,1fr) 7fr 1fr;
   grid-template-areas:
   "tit tit"
-  "st1 st2"
+  ". ."
   "img rem"
   "ft ft";
 }
   /*Eléments*/
   .tit {
     grid-area: tit;
+    width: 80%;
   }
   .st1 {
     grid-area: st1;
@@ -27,15 +31,13 @@
   /*contenus*/
   .img {
     grid-area: img;
-    width: inherit;
+    width: 80%;
     height:100%;
-    border: 1px solid;
-    border-color: rgba(202, 111, 30, 1);
 
   }
   .rem {
     grid-area: rem;
-    width: inherit;
+    width: 80%;
     height:100%;
     border: 1px solid;
     border-color: rgba(202, 111, 30, 1);
