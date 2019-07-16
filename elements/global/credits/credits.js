@@ -9,6 +9,6 @@ function creaElt(nomElt,plateau,classAff) {
   elt.setAttribute('type', 'text/html');
   elt.setAttribute('id',nomElt);
   elt.setAttribute('class', classAff);
-  elt.setAttribute('data', '../'+nomElt+'/'+nomElt+'.html');
+  elt.setAttribute('data', nomElt+'/'+nomElt+'.html');
   plat.appendChild (elt);
 }
