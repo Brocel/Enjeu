@@ -22,10 +22,9 @@ a {
   /*dimensions*/
   height: 100%;
   width: 100%;
-  /*centrer verticalement et left horizontalement*/
+  /*centrer verticalement*/
   display: flex;
   align-items: center;
-  text-align: left;
   /*habillage*/
   color: rgba(202, 111, 30, 1);
 }

@@ -24,12 +24,15 @@
   }
   .nom {
     grid-area: nom;
+    justify-content: center;
   }
   .niv {
     grid-area: niv;
+    justify-content: center;
   }
   .tit {
     grid-area: tit;
+    justify-content: center;
   }
   .age {
     grid-area: age;
@@ -57,16 +60,21 @@
   }
   .his {
     grid-area: his;
+    justify-content: center;
   }
   .for {
     grid-area: for;
+    justify-content: center;
   }
   .def {
     grid-area: def;
+    justify-content: center;
   }
   .intel {
     grid-area: int;
+    justify-content: center;
   }
   .inv {
     grid-area: inv;
+    justify-content: center;
   }

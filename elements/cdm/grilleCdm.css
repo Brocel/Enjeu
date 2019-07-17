@@ -17,16 +17,13 @@
   /*Eléments*/
   .tit {
     grid-area: tit;
-    width: 100%;
-    height:100%;
+    justify-content: center;
   }
   .oui {
     grid-area: oui;
-    width: 100%;
-    height:100%;
+    justify-content: center;
   }
   .non {
     grid-area: non;
-    width: 100%;
-    height:100%;
+    justify-content: center;
   }
