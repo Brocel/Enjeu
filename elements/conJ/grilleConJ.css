@@ -11,4 +11,5 @@
   /*éléments*/
 .conJ {
   grid-area: conJ;
+  justify-content: center;
 }
