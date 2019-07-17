@@ -19,6 +19,7 @@
   /*Eléments*/
   .tit {
     grid-area: tit;
+    justify-content: center;
   }
   /*boutons*/
   .bt1 {
