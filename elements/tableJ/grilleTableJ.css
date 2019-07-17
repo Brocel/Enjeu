@@ -1,11 +1,11 @@
-.aff {
-  height: 100%;
-  width: 100%;
+.grilleTableJ {
   display: grid;
-  grid-gap: 1%;
+  align-items: center;
+  height: 100vh;
+  grid-gap: 4%;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: repeat(5,1fr);
-  grid-template-areas:/*penser aux gutter des grid*/
+  grid-template-areas:
   "j1 nj1"
   "j2 nj2"
   "j3 nj3"

@@ -2,7 +2,6 @@
   display: grid;
   align-items: center;
   height: 100vh;
-  color: black;
   grid-gap: 4%;
   grid-template-columns: repeat(2,0.5fr) repeat(2,1fr);
   grid-template-rows: repeat(10,1fr);
