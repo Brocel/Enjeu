@@ -8,72 +8,61 @@
 	<link rel="stylesheet" href="affJ.css">
 	<link rel="stylesheet" href="grilleAffJ.css">
   <script type="text/javascript" src="affJ.js"></script>
-	<!-- <script type="text/javascript" src="../js/objetsPages.js"></script> -->
 </head>
 
 <body>
 	<div class="grilleAffJ">
-		<div id="nomJ" class="nom">
+		<div id="nomJ" class=" elt nom">
 			NomJoueur
 		</div>
-		<div id="niv" class="niv">
+		<div id="niv" class="elt niv">
 			(Niv.1)
 		</div>
-		<div id="tit" class="tit">
+		<div id="tit" class="elt tit">
 			Titre
 		</div>
-		<div id="img" class="img">
+		<div id="img" class="elt img">
 			<img class="imgJ" src="../../img/icons/mdjIcone.jpg" alt="img joueur">
 		</div>
-		<div id="age" class="age">
+		<div id="age" class="elt age">
 			Age
 		</div>
-		<div id="tai" class="tai">
+		<div id="tai" class="elt tai">
 			Taille
 		</div>
-		<div id="mas" class="mas">
+		<div id="mas" class="elt mas">
 			Masse
 		</div>
-		<div id="car" class="car">
+		<div id="car" class="elt car">
 			Caractère
 		</div>
-		<div id="rac" class="rac">
+		<div id="rac" class="elt rac">
 			Race
 		</div>
-		<div id="sex" class="sex">
+		<div id="sex" class="elt sex">
 			Sexe
 		</div>
-		<div id="met" class="met">
+		<div id="met" class="elt met">
 			Métier
 		</div>
-		<div id="spe" class="spe">
+		<div id="spe" class="elt spe">
 			Spécialité
 		</div>
-		<div id="his" class="his">
+		<div id="his" class="elt his">
 			Histoire (description)
 		</div>
-		<div id="for" class="for">
+		<div id="for" class="elt for">
 			For.
 		</div>
-		<div id="def" class="def">
+		<div id="def" class="elt def">
 			Def.
 		</div>
-		<div id="intel" class="intel">
+		<div id="intel" class="elt intel">
 			Int.
 		</div>
-		<div id="inv" class="inv">
+		<div id="inv" class="elt inv">
 			<button>Inventaire</button>
 		</div>
 	</div>
 </body>
-<script type="text/javaScript">
-//Variables globales
-var valeur;
-//Méthodes
-	function showText(f, nomElt) {
-		valeur = f.elements[nomElt].value;
-		console.log(valeur);
-		localStorage.setItem('nomJoueur', valeur);
-	}
-</script>
 </html>
