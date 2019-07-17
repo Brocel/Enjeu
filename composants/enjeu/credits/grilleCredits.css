@@ -20,7 +20,7 @@
   /*Eléments*/
   .tit {
     grid-area: tit;
-    width: 80%;
+    justify-content: center;
   }
   .st1 {
     grid-area: st1;
