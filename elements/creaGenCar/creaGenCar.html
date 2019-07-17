@@ -13,7 +13,7 @@
 
 <body>
 	<div class="grilleCreaGC">
-		<div id="rac" class="rac">
+		<div id="rac" class="elt rac">
 			2.<select id="raceJ" name="raceJ" required>
 					<option value="">Race</option>
 					<option id="hum" type="submit" value="hum">Humain</option>
@@ -23,7 +23,7 @@
 					<option id="gob" type="submit" value="gob">Gobelin</option>
 				</select>
 		</div>
-		<div id="sex" class="sex">
+		<div id="sex" class="elt sex">
 			1.<select id="sexeJ" name="sexeJ" required>
 					<option value="">Sexe</option>
 					<option id="femm" type="submit" value="femm">Femme</option>
@@ -31,7 +31,7 @@
 					<option id="masc" type="submit" value="masc">Homme</option>
 				</select>
 		</div>
-		<div id="met" class="met">
+		<div id="met" class="elt met">
 			3.<select id="metier" name="metierJ" required>
 					<option value="">Métier</option>
 					<option id="guer" type="submit" value="guer">Guerrier</option>
@@ -39,7 +39,7 @@
 					<option id="assa" type="submit" value="assa">Assassin</option>
 				</select>
 		</div>
-		<div id="spe" class="spe">
+		<div id="spe" class="elt spe">
 			4.<select id="speJ" name="speJ" required>
 					<option value="">Spécialité</option>
 					<option id="gCom" type="submit" value="gCom">Combat</option>
@@ -52,15 +52,4 @@
 		</div>
 	</div>
 </body>
-<script type="text/javaScript">
-//Variables globales
-var valeur;
-//Méthodes
-	function showText(f, nomElt) {
-		valeur = f.elements[nomElt].value;
-		console.log(valeur);
-		localStorage.setItem('nomJoueur', valeur);
-	}
-
-</script>
 </html>

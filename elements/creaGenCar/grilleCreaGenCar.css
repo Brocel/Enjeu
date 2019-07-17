@@ -16,25 +16,13 @@
   /*Eléments*/
   .rac {
     grid-area: rac;
-    width: 100%;
-    height:100%;
-    text-align: left;
   }
   .sex {
     grid-area: sex;
-    width: 100%;
-    height:100%;
-    text-align: left;
   }
   .met {
     grid-area: met;
-    width: 100%;
-    height:100%;
-    text-align: left;
   }
   .spe {
     grid-area: spe;
-    width: 100%;
-    height:100%;
-    text-align: left;
   }
