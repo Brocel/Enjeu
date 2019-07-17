@@ -4,21 +4,21 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-	<link rel="stylesheet" href="../elements/global/global.css">
+	<link rel="stylesheet" href="../global/global.css">
 	<link rel="stylesheet" href="grilleEnjeu.css">
   <link rel="stylesheet" href="enjeu.css">
-	<script type="text/javascript" src="enjeu.js"></script>
+	<script type="text/javascript" src="../global/global.js"></script>
 </head>
 
-<body onkeydown="affNomNouvJ('naiJ','nomJ')">
+<body>
 <div class="backG">
 	<div id="plateauEnjeu" class="bGround grilleEnjeu">
 		<!--Plateau principal-->
 		<div class="elt tit titre1">L'enjeu</div>
 		<!-- Side bar -->
 		<!-- Boutons -->
-		<div id="bt1" class="elt bt1 bout1" title="Table des joueurs" onclick="manipElt('naiJ','conJ','plateauEnjeu','ctR'); manipElt('affJ','tableJ','plateauEnjeu','aff'); retirElt('creaJ','plateauEnjeu')" ></div>
-		<div id="bt2" class="elt bt2 bout2" title="Naissance d'un joueur" onclick="manipElt('tableJ','affJ','plateauEnjeu','aff'); creaElt('creaJ','plateauEnjeu','af2'); retirElt('conJ','plateauEnjeu');"></div><!--onclick create element naiJ (nom)-->
+		<div id="bt1" class="elt bt1 bout1" title="Table des joueurs" onclick="manipComp('plateauEnjeu','ctR','oldComp','conJ'); manipComp('plateauEnjeu','aff','affJ','tableJ'); retirComp('plateauEnjeu','creaJ')" ></div>
+		<div id="bt2" class="elt bt2 bout2" title="Naissance d'un joueur" onclick="manipComp('plateauEnjeu','aff','tableJ','affJ',); manipComp('plateauEnjeu','aff2','oldComp','creaJ'); retirComp('plateauEnjeu','conJ');"></div><!--onclick create element naiJ (nom)-->
 		<div class="elt bt3" title="Choix du MdJ">3</div>
 		<div class="elt bt4" title="Arène">4</div>
 		<div class="elt bt5" title="?">5</div>

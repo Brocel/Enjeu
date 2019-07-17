@@ -2,9 +2,9 @@
 //création de composants
   //plateau : id de la div où placer le composant
   //classe : nom de la classe de la grille associée (pour le placement dans le document)
-  //nomComp : id du composant à créer
+  //newComp : id du composant à créer/ nom du dossier composant / nom du composant
   //chemin : chemin vers le composant à créer
-function creaComp(plateau,classe,nomComp,chemin) {
+function creaComp(plateau,classe,newComp) {
   //Variables
   var elt;
   var plat;
@@ -12,15 +12,15 @@ function creaComp(plateau,classe,nomComp,chemin) {
   //Créer l'élément, lui ajouter les attributs en fction de la valeur de para (attention au nommage des fichier html)
   elt = document.createElement('object');
   elt.setAttribute('type', 'text/html');
-  elt.setAttribute('id',nomComp);
+  elt.setAttribute('id',newComp);
   elt.setAttribute('class', classe);
-  elt.setAttribute('data', chemin);
+  elt.setAttribute('data', newComp+'/'+newComp+'.html');
   plat.appendChild (elt);
 }
 //remplacement de composants
   //oldComp : id composant à retirer
-  //newComp : id composant à créer
-function remplaceComp(plateau,classe,oldComp,newComp,chemin) {
+  //newComp : id composant à créer/nom du dossier composant/ nom du composant
+function remplaceComp(plateau,classe,oldComp,newComp) {
   //Variables
   var ancComp;
   var nouvComp;
@@ -31,16 +31,16 @@ function remplaceComp(plateau,classe,oldComp,newComp,chemin) {
   nouvComp.setAttribute('type', 'text/html');
   nouvComp.setAttribute('id',newComp);
   nouvComp.setAttribute('class', classe);
-  nouvComp.setAttribute('data', chemin);
+  nouvComp.setAttribute('data', newComp+'/'+newComp+'.html');
   plat.replaceChild(nouvComp,ancComp);
 }
 //manipulation d'éléments
-function manipComp(plateau,classe,oldComp,newComp,chemin) {
+function manipComp(plateau,classe,oldComp,newComp) {
   var ancComp = document.getElementById(oldComp);
   if (ancComp==null) {
-    creaComp(plateau,classe,nomComp,chemin);
+    creaComp(plateau,classe,newComp);
   }else {
-    remplaceComp(plateau,classe,oldComp,newComp,chemin);
+    remplaceComp(plateau,classe,oldComp,newComp);
   }
 }
 //retirer des éléments
