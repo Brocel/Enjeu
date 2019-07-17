@@ -7,9 +7,9 @@
   grid-template-columns: repeat(2,0.5fr) repeat(2,1fr);
   grid-template-rows: repeat(10,1fr);
   grid-template-areas:
-  ". . nom nom"
-  ". . niv niv"
-  ". . tit tit"
+  "img img nom nom"
+  "img img niv niv"
+  "img img tit tit"
   "age age car car"
   "mas mas tai tai"
   "sex sex rac rac"
@@ -19,6 +19,9 @@
   "his his his his";
 }
   /*Eléments*/
+  .img {
+    grid-area: img;
+  }
   .nom {
     grid-area: nom;
   }
