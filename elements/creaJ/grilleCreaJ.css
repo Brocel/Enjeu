@@ -16,23 +16,18 @@
   /*Eléments*/
   .tit {
     grid-area: tit;
-    width: 100%;
+    justify-content: center;
   }
   /*boutons*/
   .crP {
     grid-area: crP;
     width: 100%;
-    height:100%;
   }
   .crGC {
     grid-area: crGC;
     width: 100%;
-    height:100%;
-    padding-top: 0%;
   }
   .cdm {
     grid-area: cdm;
     width: 100%;
-    height:100%;
-    padding-top: 0%;
   }
