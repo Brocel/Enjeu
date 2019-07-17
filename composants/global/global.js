@@ -49,3 +49,4 @@ function retirComp(plateau,comp) {
   var plat = document.getElementById(plateau);
   plat.removeChild(compEff);
 }
+//Fenetre modale (1er test)
