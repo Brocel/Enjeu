@@ -2,7 +2,7 @@ a {
   color: white;
 }
 .bGround {
-  background-image: url("../img/background/table01.jpg");
+  background-image: url("../../img/background/table01.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -13,14 +13,14 @@ a {
 }
 /*boutons*/
 .bout1 {
-  background-image: url("../img/background/table02.jpg");
+  background-image: url("../../img/background/table02.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
   height: 100%;
 }
 .bout2 {
-  background-image: url("../img/background/adn2.png");
+  background-image: url("../../img/background/adn2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
