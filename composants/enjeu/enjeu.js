@@ -47,7 +47,11 @@ function manipComp(plateau,classe,oldComp,newComp) {
 function retirComp(plateau,comp) {
   var compEff = document.getElementById(comp);
   var plat = document.getElementById(plateau);
-  plat.removeChild(compEff);
+  if (!compEff) {
+    console.log('Rien à enlever');
+  } else {
+    plat.removeChild(compEff);
+  }
 }
 //Remplir localStorage
 function remplirStorage(cle,valeur) {
@@ -63,7 +67,7 @@ function recupStorage(cle) {
 //param cle : cle de la valeur enregistrée dans localStorage
 //param alerte : message de l'alerte dans la fonction promptBouton
 //param regExpr : pattern pour l'entrée
-function promptBouton(message,cle,alerte,regExpr) {
+function promptBouton(message,alerte,regExpr) {
   var resultatPrompt = prompt(message);
   var regEx = RegExp(regExpr);
   var testResPrompt = regEx.test(resultatPrompt);
@@ -74,9 +78,7 @@ function promptBouton(message,cle,alerte,regExpr) {
     alert(alerte);
     resultatPrompt = document.location.reload(true);
   } else {
-    remplirStorage(cle,resultatPrompt);
-    var newNomJ = recupStorage(cle);
-    console.log(newNomJ);
+    return resultatPrompt;
   }
 }
 //Fonction Boutons
@@ -87,9 +89,16 @@ function bouton(idBouton){
     manipComp('plateauEnjeu','aff','affJ','tableJ');
     retirComp('plateauEnjeu','creaJ');
   } else if (idBouton=='bt2') {
-    promptBouton('Nouveau joueur (nom)','nomNouvJ','Entrer un nom de joueur valide (1ère lettre en majuscule, max char. : 20)','[A-Z]{1}[a-zA-ZÀ-ÿ/ ]{1,19}');
+    var resPrompt = promptBouton('Nouveau joueur (nom)','Entrer un nom de joueur valide (1ère lettre en majuscule, max char. : 20)','[A-Z]{1}[a-zA-ZÀ-ÿ/ ]{1,19}');
+    remplirStorage('nomNouvJ',resPrompt);
     manipComp('plateauEnjeu','aff','tableJ','affJ',);
     manipComp('plateauEnjeu','aff2','oldComp','creaJ');
     retirComp('plateauEnjeu','conJ');
   }
+}
+//test du localStorage
+if(!localStorage.getItem('nomNouvJ')) {
+  console.log('PAS de nom enjeu.js');
+} else {
+  console.log('ya un nom enjeu.js : '+localStorage.getItem('nomNouvJ'));
 }
