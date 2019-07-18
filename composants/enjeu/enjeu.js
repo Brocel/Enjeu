@@ -53,11 +53,14 @@ function retirComp(plateau,comp) {
 //param message : message du prompt
 //param cle : cle de la valeur enregistrée dans localStorage
 //param alerte : message de l'alerte dans la fonction promptBouton
-function promptBouton(message,cle,alerte) {
+//param regExpr : pattern pour l'entrée
+function promptBouton(message,cle,alerte,regExpr) {
   var resultatPrompt = prompt(message);
+  var regEx = RegExp(regExpr);
+  var testResPrompt = regEx.test(resultatPrompt);
   if (resultatPrompt==null) {
     resultatPrompt = document.location.reload(true);
-  } else if (resultatPrompt!==/[A-Z]{1}[a-zA-ZÀ-ÿ/ ]{1,19}/) {
+  } else if (testResPrompt==false) {
     alert(alerte);
     resultatPrompt = document.location.reload(true);
   } else {
@@ -73,7 +76,7 @@ function bouton(idBouton){
     manipComp('plateauEnjeu','aff','affJ','tableJ');
     retirComp('plateauEnjeu','creaJ');
   } else if (idBouton=='bt2') {
-    promptBouton('Nouveau joueur (nom)','nomNouvJ','Entrer un nom de joueur valide (1ère lettre en majuscule, max char. : 20)');
+    promptBouton('Nouveau joueur (nom)','nomNouvJ','Entrer un nom de joueur valide (1ère lettre en majuscule, max char. : 20)','[A-Z]{1}[a-zA-ZÀ-ÿ/ ]{1,19}');
     manipComp('plateauEnjeu','aff','tableJ','affJ',);
     manipComp('plateauEnjeu','aff2','oldComp','creaJ');
     retirComp('plateauEnjeu','conJ');
