@@ -49,17 +49,3 @@ function retirComp(plateau,comp) {
   var plat = document.getElementById(plateau);
   plat.removeChild(compEff);
 }
-//Fonction Boutons (onload dans enjeu.html)
-//param idBouton : id du bouton à écouter
-function bouton(idBouton){
-  if (idBouton=='bt1') {
-    manipComp('plateauEnjeu','ctR','oldComp','conJ');
-    manipComp('plateauEnjeu','aff','affJ','tableJ');
-    retirComp('plateauEnjeu','creaJ');
-  } else if (idBouton=='bt2') {
-    prompt('Nom du nouveau Joueur');
-    manipComp('plateauEnjeu','aff','tableJ','affJ',);
-    manipComp('plateauEnjeu','aff2','oldComp','creaJ');
-    retirComp('plateauEnjeu','conJ');
-  }
-}
