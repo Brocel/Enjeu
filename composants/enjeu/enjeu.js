@@ -49,6 +49,15 @@ function retirComp(plateau,comp) {
   var plat = document.getElementById(plateau);
   plat.removeChild(compEff);
 }
+//Remplir localStorage
+function remplirStorage(cle,valeur) {
+  localStorage.setItem(cle,valeur);
+}
+function recupStorage(cle) {
+  var localItem = localStorage.getItem(cle);
+  console.log(localItem);
+  return localItem;
+}
 //Prompt bouton
 //param message : message du prompt
 //param cle : cle de la valeur enregistrée dans localStorage
@@ -58,14 +67,16 @@ function promptBouton(message,cle,alerte,regExpr) {
   var resultatPrompt = prompt(message);
   var regEx = RegExp(regExpr);
   var testResPrompt = regEx.test(resultatPrompt);
+  localStorage.clear();
   if (resultatPrompt==null) {
     resultatPrompt = document.location.reload(true);
   } else if (testResPrompt==false) {
     alert(alerte);
     resultatPrompt = document.location.reload(true);
   } else {
-    console.log(resultatPrompt);
-    localStorage.setItem(cle,resultatPrompt);
+    remplirStorage(cle,resultatPrompt);
+    var newNomJ = recupStorage(cle);
+    console.log(newNomJ);
   }
 }
 //Fonction Boutons
