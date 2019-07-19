@@ -1,52 +1,47 @@
-//Prompt bouton
+//Clean du storage
+if(!localStorage.getItem('nomNouvJ')) {
+  console.log('PAS de nomNouvJ stocké creaJ.js');
+  confirmerNom();
+} else {
+  console.log('nomNouvJ est stocké');
+  localStorage.removeItem('nomNouvJ');
+  console.log('nomNouvJ stocké effacé ');
+}
+//Prompt CréaJ
 //param message : message du prompt
 //param cle : cle de la valeur enregistrée dans localStorage
 //param alerte : message de l'alerte dans la fonction promptBouton
 //param regExpr : pattern pour l'entrée
-function nomNouvJ(message,alerte,regExpr) {
+function nomNouvJ(message) {
   var resultatPrompt = prompt(message);
+  console.log('resultatPrompt de nomNouvJ() : '+resultatPrompt);
+}
+
+function validerPrompt (alerte,regExpr) {
+  var nomNewJ = nomNouvJ('Quel est le nom du nouveau personnage ?')
   var regEx = RegExp(regExpr);
-  var testResPrompt = regEx.test(resultatPrompt);
-  localStorage.clear();
-  if (resultatPrompt==null) {
-    resultatPrompt = window.location.reload(true);
+  var testResPrompt = regEx.test(nomNewJ);
+  if (nomNewJ==null) {
+    console.log('Prompt annulé (validerPrompt())');
   } else if (testResPrompt==false) {
     alert(alerte);
-    resultatPrompt = document.location.reload(true);
+    console.log('Nom invalide (validerPrompt)');
+    return false;
   } else {
-    console.log('Prompt réussi');
+    console.log('Nom correct');
+    return nomNewJ;
   }
 }
-//Remplir localStorage
-// function remplirStorage(cle,valeur) {
-//     localStorage.setItem(cle,valeur);
-// }
-//test du localStorage et prompt
-// if(!localStorage.getItem('nomNouvJ')) {
-//   console.log('PAS de nom (creaJ.js)');
-//   var promptNomNouvJ = nomNouvJ('Nouveau joueur (nom)','Entrer un nom de joueur valide (1ère lettre en majuscule, max char. : 20)','[A-Z]{1}[a-zA-ZÀ-ÿ/ ]{1,19}');
-//   remplirStorage('nomNouvJ',promptNomNouvJ);
-//   document.location.reload(true);
-// } else {
-//   console.log('ya un nom (creaJ.js) : '+localStorage.getItem('nomNouvJ'));
-//   localStorage.clear();
-// }
 
-if(!localStorage.getItem('nomNouvJ')) {
-  console.log('PAS de nomNouvJ stocké');
-  remplirStorage('nomNouvJ');
-} else {
-  console.log('nomNouvJ stocké : ' + localStorage.getItem('nomNouvJ'));
-  localStorage.removeItem('nomNouvJ');
-  document.location.reload(true);
-
-}
-
-function remplirStorage(cle) {
-  var promptNomNouvJ = nomNouvJ('Nouveau joueur (nom)','Entrer un nom de joueur valide (1ère lettre en majuscule, max char. : 20)','[A-Z]{1}[a-zA-ZÀ-ÿ/ ]{1,19}');
-  localStorage.setItem(cle, promptNomNouvJ);
-}
-
-function updateAff() {
-
+function confirmerNom() {
+  var valPrompt = validerPrompt('Entrer un nom de joueur valide, exemple : Noob (20 char. max)','[A-Z]{1}[a-zA-ZÀ-ÿ/ ]{1,19}');
+  console.log('valPrompt : '+valPrompt);
+  if (valPrompt==false) {
+    console.log('Nom invalide (confirmerNom())');
+  } else {
+    confirm('Vous allez créer un nouveau personnage');
+    console.log('nom confirmé');
+    var nomNouveauJoueur = localStorage.setItem('nomNouvJ',valPrompt);
+    console.log(nomNouveauJoueur);
+  }
 }
