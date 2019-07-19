@@ -55,7 +55,7 @@ function retirComp(plateau,comp) {
 }
 //Remplir localStorage
 function remplirStorage(cle,valeur) {
-  localStorage.setItem(cle,valeur);
+    localStorage.setItem(cle,valeur);
 }
 function recupStorage(cle) {
   var localItem = localStorage.getItem(cle);
@@ -89,16 +89,8 @@ function bouton(idBouton){
     manipComp('plateauEnjeu','aff','affJ','tableJ');
     retirComp('plateauEnjeu','creaJ');
   } else if (idBouton=='bt2') {
-    var resPrompt = promptBouton('Nouveau joueur (nom)','Entrer un nom de joueur valide (1ère lettre en majuscule, max char. : 20)','[A-Z]{1}[a-zA-ZÀ-ÿ/ ]{1,19}');
-    remplirStorage('nomNouvJ',resPrompt);
     manipComp('plateauEnjeu','aff','tableJ','affJ',);
     manipComp('plateauEnjeu','aff2','oldComp','creaJ');
     retirComp('plateauEnjeu','conJ');
   }
-}
-//test du localStorage
-if(!localStorage.getItem('nomNouvJ')) {
-  console.log('PAS de nom enjeu.js');
-} else {
-  console.log('ya un nom enjeu.js : '+localStorage.getItem('nomNouvJ'));
 }
