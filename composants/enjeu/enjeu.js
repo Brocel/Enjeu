@@ -89,6 +89,7 @@ function bouton(idBouton){
     manipComp('plateauEnjeu','aff','affJ','tableJ');
     retirComp('plateauEnjeu','creaJ');
   } else if (idBouton=='bt2') {
+    ouvrirFenetre('../global/dialogue/nomNouvJouDial/nomNouvJouDial.html','nomNouvJouDial');
     manipComp('plateauEnjeu','aff','tableJ','affJ',);
     manipComp('plateauEnjeu','aff2','oldComp','creaJ');
     retirComp('plateauEnjeu','conJ');
