@@ -49,3 +49,25 @@ function retirComp(plateau,comp) {
   var plat = document.getElementById(plateau);
   plat.removeChild(compEff);
 }
+
+//Ouverture d'une fenêtre de dialogue
+var WindowObjectReference = null; // variable globale : référence de l'objet window
+
+function ouvrirFenetre(lien,nomFenetre) {
+  if (WindowObjectReference == null || WindowObjectReference.closed) {
+    /* si le pointeur vers l'objet window n'existe pas, ou s'il existe
+       mais que la fenêtre a été fermée */
+    var proprietesFen = 'top=200, left=500, width=300, height=300, resizable=no, scrollbar=no, menubar=no, toolbar=no, status=no, directories=no, location=no,'
+    WindowObjectReference = window.open(lien,nomFenetre,proprietesFen);
+    /* alors, création du pointeur. La nouvelle fenêtre sera créée par dessus
+       toute autre fenêtre existante. */
+  }
+  else {
+    WindowObjectReference.focus();
+    /* sinon, la référence à la fenêtre existe et la fenêtre n'a pas été
+       fermée: la fenêtre est peut-être minimisée ou derrière la fenêtre
+       principale. Par conséquent, on peut l'amener par dessus les autres à
+       l'aide de la méthode focus(). Il n'est pas nécessaire de recréer la fenêtre
+       ou de recharger la ressource référencée. */
+  };
+}
