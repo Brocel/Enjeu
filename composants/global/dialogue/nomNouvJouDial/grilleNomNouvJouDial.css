@@ -4,14 +4,19 @@
   display: grid;
   grid-gap: 1%;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2,1fr);
+  grid-template-rows: 1fr repeat(2,0.5fr);
   grid-template-areas:
   "nomJ"
+  "tip"
   "val";
 }
   /*éléments*/
 .nomJ {
   grid-area: nomJ;
+  justify-content: center;
+}
+.tip {
+  grid-area: tip;
   justify-content: center;
 }
 .val {
