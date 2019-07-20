@@ -62,25 +62,6 @@ function recupStorage(cle) {
   console.log(localItem);
   return localItem;
 }
-//Prompt bouton
-//param message : message du prompt
-//param cle : cle de la valeur enregistrée dans localStorage
-//param alerte : message de l'alerte dans la fonction promptBouton
-//param regExpr : pattern pour l'entrée
-function promptBouton(message,alerte,regExpr) {
-  var resultatPrompt = prompt(message);
-  var regEx = RegExp(regExpr);
-  var testResPrompt = regEx.test(resultatPrompt);
-  localStorage.clear();
-  if (resultatPrompt==null) {
-    resultatPrompt = document.location.reload(true);
-  } else if (testResPrompt==false) {
-    alert(alerte);
-    resultatPrompt = document.location.reload(true);
-  } else {
-    return resultatPrompt;
-  }
-}
 //Fonction Boutons
 //param idBouton : id du bouton à écouter
 function bouton(idBouton){
