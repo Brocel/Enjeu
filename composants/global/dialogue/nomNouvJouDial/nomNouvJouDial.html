@@ -11,17 +11,17 @@
 
 <body>
 	<div class="elt bGround">
-		<div class="grilleNomJ">
-			<form id="formNomJ" class="elt nomJ" title="Entrer le nom du personnage à créer (1ère lettre Maj, 20 char. max)">
+		<form id="formNomJ" class="grilleNomJ" novalidate>
+			<div class="nomJ">
 				<input id="nomJ" name="nomJ" type="text" placeholder="Nom du Nouveau Joueur" required pattern = '[A-Z]{1}[a-zA-ZÀ-ÿ/ ]{1,19}'/>
-			</form>
+			</div>
       <div class="tip">
-        Exemple de nom valide : NoobPlayer
+        <span class="error" aria-live="polite"></span>
       </div>
       <div class="val">
         <button id="valBtn">Valider</button>
       </div>
-    </div>
+    </form>
 	</div>
 </body>
 <script type="text/javascript" src="../../global.js"></script>
