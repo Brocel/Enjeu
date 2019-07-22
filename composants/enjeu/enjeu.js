@@ -98,8 +98,10 @@ function ouvrirFenetre(lien,nomFenetre) {
   };
 }
 //Test localstorage
-function testLocalStorage (cle) {
-  var test = localStorage.getItem(cle);
+function testLocalStorage () {
+  var objet = document.location.protocol('../dialogue/nomNouvJouDial/nomNouvJouDial.html');
+
+  var test = objet.localStorage.getItem('nomNouvJ');
   console.log(test);
   confirm(test);
 }
