@@ -97,3 +97,9 @@ function ouvrirFenetre(lien,nomFenetre) {
        ou de recharger la ressource référencée. */
   };
 }
+//Test localstorage
+function testLocalStorage (cle) {
+  var test = localStorage.getItem(cle);
+  console.log(test);
+  confirm(test);
+}
