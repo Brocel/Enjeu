@@ -66,11 +66,11 @@ function recupStorage(cle) {
 //param idBouton : id du bouton à écouter
 function bouton(idBouton){
   if (idBouton=='bt1') {
-    manipComp('plateauEnjeu','ctR','oldComp','conJ');
+    manipComp('plateauEnjeu','ctR','nomNouvJ','conJ');
     manipComp('plateauEnjeu','aff','affJ','tableJ');
     retirComp('plateauEnjeu','creaJ');
   } else if (idBouton=='bt2') {
-    ouvrirFenetre('../global/dialogue/nomNouvJouDial/nomNouvJouDial.html','nomNouvJouDial');
+    manipComp('plateauEnjeu','ctR','conJ','nomNouvJ');
     manipComp('plateauEnjeu','aff','tableJ','affJ',);
     manipComp('plateauEnjeu','aff2','oldComp','creaJ');
     retirComp('plateauEnjeu','conJ');
@@ -99,7 +99,8 @@ function ouvrirFenetre(lien,nomFenetre) {
 }
 //Test localstorage
 function testLocalStorage () {
-  var objet = document.location.protocol('../dialogue/nomNouvJouDial/nomNouvJouDial.html');
+  var dialPage;
+
 
   var test = objet.localStorage.getItem('nomNouvJ');
   console.log(test);
