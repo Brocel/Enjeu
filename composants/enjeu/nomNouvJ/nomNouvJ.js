@@ -19,16 +19,23 @@ nomJou.addEventListener('input', function (event) {
 
 form.addEventListener('submit', function (event) {
   var nom = nomJou.value;
-  var stockage = localStorage.setItem('nomNouvJ',nom);
   // Chaque fois que l'utilisateur tente d'envoyer les données
   // on vérifie que le champ nomJou est valide.
   if (!nomJou.validity.valid) {
     // S'il est invalide, on affiche un message d'erreur personnalisé
-    conseil.innerHTML = "J'attends un nom de joueur correct, mon cher !";
+    conseil.innerHTML = "Première lettre en Majuscule, 20 char. max";
     conseil.className = "error active";
     // Et on empêche l'envoi des données du formulaire
     event.preventDefault();
   } else {
-    window.close();
+    var stockage = localStorage.setItem('nomNouvJ',nom);
+    testLocalStorage();
   }
 }, false);
+
+//Test localstorage
+function testLocalStorage() {
+  var test = localStorage.getItem('nomNouvJ');
+  console.log(test);
+  confirm(test);
+}
