@@ -3,8 +3,6 @@
 var form  = document.getElementsByTagName('form')[0];
 var nomJou = document.getElementById('nomJ');
 var conseil = document.querySelector('.error');
-var domaine = document.domain;
-console.log(domaine);
 nomJou.addEventListener('input', function (event) {
   // Chaque fois que l'utilisateur saisit quelque chose
   // on vérifie la validité du champ nom joueur.

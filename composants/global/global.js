@@ -47,5 +47,39 @@ function manipComp(plateau,classe,oldComp,newComp) {
 function retirComp(plateau,comp) {
   var compEff = document.getElementById(comp);
   var plat = document.getElementById(plateau);
-  plat.removeChild(compEff);
+  if (!compEff) {
+    console.log('aucun élément à retirer');
+  } else {
+    plat.removeChild(compEff);
+  }
+}
+
+//fonctions du localstorage
+function stockageLocal() {
+  var objetsCrees = document.querySelector('.ctR');
+  var form  = objetsCrees.querySelector('#formNomJ');
+  var inputNom = objetsCrees.querySelector('input');
+  var conseil = objetsCrees.querySelector('.error');
+  form.addEventListener('submit', function (event) {
+    // Chaque fois que l'utilisateur tente d'envoyer les données
+    // on vérifie que le champ nomJou est valide.
+    if (!inputNom.validity.valid) {
+      // S'il est invalide, on affiche un message d'erreur personnalisé
+      conseil.innerHTML = "Première lettre en Majuscule, 20 char. max";
+      conseil.className = "error active";
+      // Et on empêche l'envoi des données du formulaire
+      event.preventDefault();
+    } else {
+      var nom = inputNom.value;
+      var stockage = localStorage.setItem('nomNouvJ',nom);
+      testLocalStorage();
+      }
+    }, false);
+}
+
+//Test localstorage
+function testLocalStorage() {
+  var test = localStorage.getItem('nomNouvJ');
+  console.log(test);
+  confirm(test);
 }
