@@ -56,10 +56,10 @@ function retirComp(plateau,comp) {
 
 //fonctions du localstorage
 function stockageLocal() {
-  var objetsCrees = document.querySelector('.ctR');
-  var form  = objetsCrees.querySelector('#formNomJ');
-  var inputNom = objetsCrees.querySelector('input');
-  var conseil = objetsCrees.querySelector('.error');
+  var compNomJ = document.getElementById('nomNouvJ');
+  var form  = compNomJ.querySelector('form');
+  var inputNom = compNomJ.querySelector('input');
+  var conseil = compNomJ.querySelector('.error');
   form.addEventListener('submit', function (event) {
     // Chaque fois que l'utilisateur tente d'envoyer les données
     // on vérifie que le champ nomJou est valide.
