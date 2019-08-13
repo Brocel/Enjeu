@@ -11,3 +11,5 @@ Support de jeu de rôles (rpg) basé sur javascript, HTML5 et CSS
 * Eléments :
 - les éléments se trouvent dans le dossier 'Enjeu/elements/nomElement'
 - dans /nomElement se trouvent : un fichier nomElement.html, et deux fichiers css : 'nomElement.css' (style de l'élément) et 'grilleNomElement.css (structure grid css)'
+
+* Migration vers xubuntu : test git install et git clone et commit
