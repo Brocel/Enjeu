@@ -24,3 +24,5 @@ Support de jeu de rôles (rpg) basé sur javascript, HTML5 et CSS
 * Idée générale : développer un support de jeu ludique, à l'aide des langages de base, qui soit facilement utilisable
                   sur un maximum de supports et de systèmes d'exploitation
 * Structurer comme angular (ou presque)
+
+(test commit nouvelle machine)
